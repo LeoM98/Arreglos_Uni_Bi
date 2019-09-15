@@ -1,0 +1,10 @@
+El operador condicional ?: tiene tres operandos, lo que significa que es un operador ternario.
+
+La forma general de éste operador es:
+
+expresion1 ? expresion2 : expresion3
+
+Funciona de la siguiente forma:
+
+Se evalúa expresion1, si el resultado de la evaluación es verdadero (diferente de cero), se ejecuta expresion2;
+si el resultado de la evaluación de expresion1 es falso (igual a cero), se ejecuta expresion3.
