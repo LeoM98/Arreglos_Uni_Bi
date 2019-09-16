@@ -7,8 +7,10 @@ int main(){
     //Tamaño de los arreglos o vectores
     int n;
     //Se pide el tamaño y se guarda
-    cout << "Digite un tamaño para los arreglos: "; cin >> n;
-
+    //restriccion
+    do{
+        cout << "Digite un tamaño para los arreglos: "; cin >> n;
+    }while (n<1);
     //Definicion de arreglos
     double corriente[n], resistencia[n], voltios[n];
 

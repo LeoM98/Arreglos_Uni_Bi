@@ -8,15 +8,19 @@ int main(){
     //tamaños de la matriz
     int n,m,auxiliar=0;
 
-    cout << "Ingrese el tamaño de la fila: "; cin>>n;
+    do{
+        cout << "Ingrese el tamaño de la fila: "; cin>>n;
+    }while(n<2);
+    //Se condicionan las columnas para que sean del mismo tamaño de las filas 
 
     do{
         cout << "Ingrese el tamaño de la columna: "; cin >>m;
     }while(m!=n);
 
+    //definición de la matriz
     double matriz[n][m];
 
-    //Matriz
+    //Se ingresan los valores a determinar
     cout << "Matriz a determinar\n";
     for(int i = 0; i<n; i++){
         for(int j = 0; j<m; j++){
@@ -42,7 +46,8 @@ int main(){
     else
         cout << "La matriz no es identidad(no hay ceros en su diagonal).\n ";
     
-   //Print matriz 
+    
+   //Impresión de la matriz
 
     for(int i = 0; i<n; i++){
         for(int j = 0; j<m; j++){
