@@ -6,7 +6,8 @@ using namespace std;
 int main(){
 
     //tamaños de la matriz
-    int n,m,auxiliar=0;
+    int n,m;
+    int auxiliar= 0,auxiliar2=0;
 
     do{
         cout << "Ingrese el tamaño de la fila: "; cin>>n;
@@ -31,21 +32,21 @@ int main(){
 
     //Verificado si es o no es identidad
     for(int i = 0; i<n; i++){
-          for(int j = 0; j<m; j++){
-               if((matriz[i][j] != 1) && (matriz[i][j])){
-                 auxiliar=1;
-                 break;
-               }
-          }
+        for(int j = 0; j<m; j++){
+            if(i==j){
+                if(matriz[i][j] != 1){
+                    auxiliar=1;
+                    break;
+                }  
+            }else{
+                if(matriz[i][j]!=0){
+                    auxiliar2 =1;
+                }
+            }
+        }
     }
 
-    if(auxiliar==0){
-      cout<<"La matriz es identidad (cero en su diagonal).\n";
-    }
-
-    else
-        cout << "La matriz no es identidad(no hay ceros en su diagonal).\n ";
-    
+    (auxiliar == 0 and auxiliar2 == 0 ) ? cout << "La matriz es identidad\n": cout << "La matriz no es identidad\n ";
     
    //Impresión de la matriz
 
